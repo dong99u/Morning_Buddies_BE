@@ -65,7 +65,7 @@ com
  ㄴ morningbuddies
      ㄴ morningbuddies
          ㄴ domain
-         |   ㄴ user
+         |   ㄴ member
          |   |   ㄴ controller
          |   |   ㄴ dto
          |   |   ㄴ entity
