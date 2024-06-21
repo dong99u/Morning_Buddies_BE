@@ -61,32 +61,23 @@ feature/기능요약 형식. ex) feature/login
 
 ### ✅ 도메인형 디렉터리 구조
 ```
-com
- ㄴ morningbuddies
-     ㄴ morningbuddies
-         ㄴ domain
-         |   ㄴ member
-         |   |   ㄴ controller
-         |   |   ㄴ dto
-         |   |   ㄴ entity
-         |   |   ㄴ service
-         |   |   ㄴ repository
-         |   |   ㄴ exception
-         |   ㄴ group
-         |   |   ㄴ controller
-         |   |   ㄴ dto
-         |   |   ㄴ entity
-         |   |   ㄴ service
-         |   |   ㄴ repository
-         |   |   ㄴ exception
-         |   ...
-         ㄴ global
-             ㄴ auth
-             ㄴ common
-             ㄴ config
-             ㄴ exception
-             ㄴ infra
-             ㄴ util
+.
+└── com
+    └── morningbuddies
+        └── morningbuddies
+            ├── MorningbuddiesApplication.java
+            ├── apiPayload
+            ├── base
+            ├── config
+            ├── converter
+            ├── domain
+            ├── entity
+            ├── repository
+            ├── service
+            ├── validation
+            └── web
+                ├── controller
+                └── dto
 ```
 
 ## ☑️ 코드 컨벤션
