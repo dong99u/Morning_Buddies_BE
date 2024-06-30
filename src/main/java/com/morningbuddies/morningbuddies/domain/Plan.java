@@ -9,6 +9,8 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -36,4 +38,7 @@ public class Plan extends MutableBaseEntity {
 
     @Column(nullable = false)
     private LocalTime billingCycle; // 결제 주기
+
+    @OneToMany(mappedBy = "plan", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Subscription> subscriptions = new ArrayList<>();
 }
