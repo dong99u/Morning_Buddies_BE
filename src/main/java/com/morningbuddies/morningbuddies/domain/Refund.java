@@ -39,4 +39,6 @@ public class Refund extends MutableBaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "subscription_id")
     private Subscription subscription; // 구독
+
+
 }
