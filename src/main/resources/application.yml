@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://morning-buddies.chu202akwjzf.ap-northeast-2.rds.amazonaws.com:3306/morningbuddies?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: jdbc:mysql://db-ghpg.chu202akwjzf.ap-northeast-2.rds.amazonaws.com:3306/morningbuddies?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: root
     password: ehdfprl77
     hikari:
