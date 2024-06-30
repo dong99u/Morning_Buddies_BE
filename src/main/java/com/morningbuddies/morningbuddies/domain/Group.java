@@ -62,4 +62,7 @@ public class Group extends MutableBaseEntity {
 
     @OneToOne(mappedBy = "group", cascade = CascadeType.ALL)
     private Alarm alarm; // 알람
+
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL)
+    private List<Notification> notifications = new ArrayList<>(); // 알림
 }
