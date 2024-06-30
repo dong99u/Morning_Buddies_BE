@@ -44,4 +44,7 @@ public class Subscription extends MutableBaseEntity {
     @JoinColumn(name = "payment_id", nullable = false)
     private Payment payment;
 
+    @OneToOne(mappedBy = "subscription", cascade = CascadeType.ALL)
+    private Refund refund;
+
 }
