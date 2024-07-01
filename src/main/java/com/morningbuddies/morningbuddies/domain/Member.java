@@ -1,6 +1,7 @@
 package com.morningbuddies.morningbuddies.domain;
 
 import com.morningbuddies.morningbuddies.domain.common.MutableBaseEntity;
+import com.morningbuddies.morningbuddies.domain.enums.AlarmSound;
 import com.morningbuddies.morningbuddies.domain.enums.SocialMedia;
 import com.morningbuddies.morningbuddies.domain.mapping.MemberGroup;
 import jakarta.persistence.*;
@@ -55,6 +56,9 @@ public class Member extends MutableBaseEntity {
 
     @Column(nullable = false)
     private boolean isActivated; // 활성화 여부
+
+    @Enumerated(EnumType.STRING)
+    private AlarmSound alarmSound; // 알람 소리
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberGroup> memberGroups = new ArrayList<>();
