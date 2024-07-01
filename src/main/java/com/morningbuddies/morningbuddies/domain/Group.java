@@ -45,6 +45,9 @@ public class Group extends MutableBaseEntity {
 
     private LocalTime timeOut; // 타임아웃 시간
 
+    @Column(nullable = true)
+    private String groupImageUrl; // 그룹 이미지 URL
+
     @Min(1)
     @Max(10)
     @Column(nullable = false)
