@@ -1,5 +1,8 @@
 package com.morningbuddies.morningbuddies.web.controller;
 
+import com.morningbuddies.morningbuddies.apiPayload.ApiResponse;
+import com.morningbuddies.morningbuddies.converter.HealthConverter;
+import com.morningbuddies.morningbuddies.web.dto.health.HealthResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,9 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class RootController {
 
     @GetMapping("/health")
-    public String healthCheck() {
+    public ApiResponse<HealthResponse.HealthResponseDTO> healthCheck() {
 
-        return "I'm healthy!";
+        String message = "MorningBuddies is running";
+
+        HealthResponse.HealthResponseDTO healthResponseDTO = HealthConverter.toHealthResponseDTO(message);
+
+        return ApiResponse.onSuccess(healthResponseDTO);
 
     }
 }
