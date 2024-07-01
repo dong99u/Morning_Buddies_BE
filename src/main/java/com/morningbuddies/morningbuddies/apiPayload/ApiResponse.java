@@ -30,7 +30,7 @@ public class ApiResponse<T> {
     * */
 
     public static <T> ApiResponse<T> onSuccess(T data){
-        return new ApiResponse<>(true, SuccessStatus._OK.getCode() , SuccessStatus._OK.getMessage(), data);
+        return new ApiResponse<>(true, SuccessStatus.OK.getCode() , SuccessStatus.OK.getMessage(), data);
     }
 
     public static <T> ApiResponse<T> of(BaseCode code, T data){
